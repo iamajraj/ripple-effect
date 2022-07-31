@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(36, 36, 36);
+}
+
+.box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:not(:last-child) {
+  margin-right: 40px;
+}
+.btn {
+  width: 250px;
+  height: 80px;
+  border-radius: 50px;
+  font-size: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(92, 84, 221, 1) 0%,
+    rgba(0, 125, 255, 1) 100%
+  );
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.ripple {
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ripple 1s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 600px;
+    height: 600px;
+    opacity: 0;
+  }
+}
